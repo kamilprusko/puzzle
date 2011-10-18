@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Terminal=false
+Name=Puzzle
+Comment=A jigsaw puzzle game
+GenericName=Jigsaw Puzzle Game
+Icon=puzzle
+Exec=@BINDIR@/puzzle
+Categories=GNOME;GTK;Game;
+#StartupNotify=true
+

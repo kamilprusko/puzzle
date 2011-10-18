@@ -1,0 +1,56 @@
+
+TODO List:
+    * Rotation
+    * Snapping, make small rotations if needed (like 60*)
+    * Grouping and Detaching from group
+
+    * Detect when solved
+        * Fade out pieces bump-map / highlights
+        * Show dialog when solved, display time
+
+    * Shadows
+        * Gaussian blur IIR filter for cairo surface
+        * NOTE: Clutter offers its own depth control, so shadows need to be 
+          rendered on a bottom-most actor; or we can draw rectangle on different Z, 
+          with material set to enable depth test
+    
+    * Highlights
+        * Puzzle.Piece creates normal-map / bump-map
+        * Write a GLSL shader (sort of phong model)
+        * Make a fallback if GLSL not supported, just draw outlines
+    
+    * New Game dialog: select image and number of pieces
+    * Save state on quit
+    * Restore on startup
+    * Leave fullscreen button, if in fullscreen mode
+
+    * Throwing pieces
+        * Just add Clutter.SwipeAction for every piece
+
+    * Viewport:
+        * Zoom
+        * Scrollbars
+
+    * Statusbar:
+        * Timer, Number of pieces, Pieces left
+        * Zoom slider
+
+    * Optimizations
+        * Make Puzzle.Edge class work only on cairo paths
+        * Make Piece.path_optimized for Piece.pick()
+        * Make Gaussian Blur use SSE or something
+    
+    * Write a User Manual
+
+    * Write a nicer README file
+    
+    * Translate
+    
+    * Sounds
+
+    * Open remote images by GIO
+    
+    * Command line args
+        
+    * Improve app icon smaller than 64x64
+    

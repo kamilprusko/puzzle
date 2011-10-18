@@ -1,0 +1,32 @@
+#!/usr/bin/env python
+# encoding: utf-8
+
+def build (bld):
+    prog = bld.new_task_gen (features='valac c cprogram')
+
+    prog.vapi_dirs = '../vapi' # /usr/share/vala-0.12/vapi/'
+    prog.cflags = '-include config.h' # -I'+ os.path.abspath('src')
+
+    
+    # symbolic name used to reference this object
+    #prog.name = 'darkroom.program'
+
+    # source files
+    prog.source = prog.path.ant_glob ('*.vala')
+
+    # name of the resulting program
+    prog.target = 'puzzle'
+
+    # libraries to link against
+    prog.uselib = "gtk cairo clutter clutter-gtk" # clutter-gesture"
+
+    # Vala packages to use
+    prog.packages = 'config gtk+-3.0 gio-2.0 cairo clutter-1.0 clutter-gtk-1.0' # clutter-gesture-1.0'
+    
+
+    # Compiler options
+    
+    # Enable threading
+    prog.threading = True
+
+

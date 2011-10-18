@@ -1,0 +1,110 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="getting-started"
+      xml:lang="en">
+
+<info>
+    <credit type="author">
+        <name>Shaun McCance</name>
+        <email>shaunm@gnome.org</email>
+        <years>2010</years>
+    </credit>
+  
+    <credit type="translator">
+        <name>Shaun McCance</name>
+        <email>shaunm@gnome.org</email>
+        <years>2010</years>
+    </credit>
+  
+    <link type="guide" xref="index"/>
+    
+    <desc>Add code snippets, file contents, and command lines to your Mallard document.</desc>
+</info>
+
+<title>Getting Started</title>
+
+<p>By the end of this page, you will be able to plant your magic
+beans and nurture them into a bean sprout.</p>
+<steps>
+  <item><p>Dig a hole 5cm deep.</p></item>
+  <item><p>Place your magic beans in the hole.</p></item>
+  <item><p>Fill the hole with clean dirt and pat it level.</p></item>
+  <item><p>Water daily.</p></item>
+</steps>
+
+
+<section id="snippets">
+<title>snippets</title>
+
+<example>
+<code><![CDATA[
+<page xmlns="http://projectmallard.org/1.0/
+      type="guide" id="index">
+  <info>
+    <!-- Page information goes here -->
+  </info>
+  <!-- Page contents go here -->
+</page>
+]]></code>
+</example>
+
+<listing>
+<title><file>index.page</file></title>
+<code><![CDATA[
+<page xmlns="http://projectmallard.org/1.0/
+      type="guide" id="index">
+  <info>
+    <!-- Page information goes here -->
+  </info>
+  <!-- Page contents go here -->
+</page>
+]]></code>
+</listing>
+
+<listing>
+<title>Process a Mallard Document</title>
+<desc>Note that the <cmd>pkg-config</cmd> command is surrounded by backticks.</desc>
+<screen>
+xsltproc -o index.html --xinclude --stringparam mal.cache.file index.cache \
+  `pkg-config --variable mal2html.xsl yelp-xsl` \
+  index.page
+</screen>
+</listing>
+
+
+<screen>
+<output style="prompt">$ </output><input>ls *.page</input>
+<output>index.page  planting.page  uses.page</output>
+<output style="prompt">$ </output><input>rm uses.page</input>
+<output style="prompt">$ </output><input>ls *.page</input>
+<output>index.page  planting.page</output>
+<output style="prompt">$ </output><input>rm uses.page</input>
+<output style="error">rm: cannot remove `uses.page': No such file or directory</output>
+</screen>
+
+<note style="tip">
+<p>Just as in code blocks, a leading line break is ignored in
+<code>screen</code> elements.</p>
+</note>
+
+</section>
+
+
+
+<media type="image" src="media/puzzle-logo.png"/>
+<!--<media type="image" src="mallard-logo.png" width="240" height="60"/>-->
+
+
+<media type="video" src="mallard-logo.ogv">
+    <p>Message to display when, playing the video is not available.</p>
+</media>
+
+
+
+<figure>
+  <title>Mallard Logo</title>
+  <desc>a question-mark-shaped duck head in a circle.</desc>
+  <media type="image" src="mallard-logo.png"/>
+</figure>
+
+</page>

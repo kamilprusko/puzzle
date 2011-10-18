@@ -1,0 +1,62 @@
+<ui>
+
+<menubar name="menubar">
+	<menu action="game">
+		<menuitem action="game-new"/>
+		<!-- <placeholder name="Open Placeholder"/> -->	    
+		<separator/>
+		<menuitem action="game-pause"/>
+		<menuitem action="game-resume"/>
+		<menuitem action="game-shuffle"/>
+		<separator/>
+		<menuitem action="game-quit"/>	
+	</menu>
+	
+	<menu action="settings">
+		<menuitem action="fullscreen"/>
+		<menuitem action="leave-fullscreen"/>
+		<menuitem action="toggle-toolbar"/>
+		<menuitem action="toggle-scrollbars"/>
+		<separator/>
+        <!--
+    	<placeholder name="Zoom Items">
+		    <menuitem name="Zoom In" action="Zoom In"/>
+		    <menuitem name="Zoom Out" action="Zoom Out"/>
+		    <menuitem name="Zoom Normal" action="Zoom Normal"/>
+    	</placeholder>
+		-->
+		<menuitem action="preferences"/>
+	</menu>
+
+	<menu action="help">
+		<menuitem action="help-contents"/>
+		<!--<placeholder name="LaunchpadItems"/>-->
+		<menuitem action="help-about"/>
+	</menu>
+
+</menubar>
+
+<toolbar name="toolbar">
+	<toolitem action="game-new"/>
+	<separator/>
+	<toolitem action="game-pause"/>
+	<toolitem action="game-resume"/>
+	<toolitem action="game-shuffle"/>
+	<separator/>
+	<toolitem action="fullscreen"/>
+	<toolitem action="leave-fullscreen"/>
+</toolbar>
+
+<!--
+<accelerator action="Search"/>
+<accelerator action="SplitViewNextPane"/>
+<accelerator action="TabsPrevious"/>
+<accelerator action="TabsNext"/>
+<accelerator action="TabsMoveLeft"/>
+<accelerator action="TabsMoveRight"/>
+<accelerator action="ZoomInAccel"/>
+<accelerator action="ZoomInAccel2"/>
+<accelerator action="ZoomOutAccel"/>
+-->
+
+</ui>
